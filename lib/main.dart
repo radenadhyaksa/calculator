@@ -217,6 +217,17 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+
+
+void pressNumber(int number) {
+    setState(() {
+      if (screenText == '0') {
+        screenText = '$number';
+      } else {
+        screenText = '$screenText$number';
+      }
+    });
+  }
 }
 
 class CalculatorButton extends StatelessWidget {
