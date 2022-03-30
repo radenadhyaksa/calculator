@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +19,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String screenText = '0';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +46,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
+          
           GridView.count(
             padding: const EdgeInsets.all(0),
             shrinkWrap: true,
@@ -132,6 +139,14 @@ class MyHomePage extends StatelessWidget {
               CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
+                text: '5',
+                onTap: () {
+                  pressNumber(5);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
                 text: '6',
                 onTap: () {
                   pressNumber(6);
@@ -219,9 +234,7 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
-
-
-void pressNumber(int number) {
+  void pressNumber(int number) {
     setState(() {
       if (screenText == '0') {
         screenText = '$number';
@@ -244,15 +257,23 @@ class CalculatorButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: backgroundColor,
-      child: Center(
-        child: Text(
-          text,
-          style: Theme.of(context)
-              .textTheme
-              .headline4!
-              .copyWith(color: foregroundColor),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        color: backgroundColor,
+        child: Center(
+          child: icon == null
+              ? Text(
+                  text,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline4!
+                      .copyWith(color: foregroundColor),
+                )
+              : Icon(
+                  icon,
+                  color: foregroundColor,
+                ),
         ),
       ),
     );
