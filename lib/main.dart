@@ -54,6 +54,15 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
 
+               CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorLight,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '+/-',
+                onTap: () {
+                  // TODO
+                },
+              ),
+
 
 
         ],
