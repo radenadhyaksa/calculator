@@ -129,6 +129,93 @@ class MyHomePage extends StatelessWidget {
                   pressNumber(4);
                 },
               ),
+               CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '6',
+                onTap: () {
+                  pressNumber(6);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorDark,
+                foregroundColor: Theme.of(context).primaryColorLight,
+                text: 'x',
+                onTap: () {
+                  // TODO
+                },
+              ),
+               CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '1',
+                onTap: () {
+                  pressNumber(1);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '2',
+                onTap: () {
+                  pressNumber(2);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '3',
+                onTap: () {
+                  pressNumber(3);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorDark,
+                foregroundColor: Theme.of(context).primaryColorLight,
+                text: '-',
+                onTap: () {
+                  // TODO
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '0',
+                onTap: () {
+                  pressNumber(0);
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '.',
+                onTap: () {
+                  setState(() {
+                    if (!screenText.contains('.')) {
+                      screenText = '$screenText.';
+                    }
+                  });
+                },
+              ),
+              CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorLight,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '=',
+                onTap: () {
+                  // TODO
+                },
+              ),
+               CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorDark,
+                foregroundColor: Theme.of(context).primaryColorLight,
+                text: '+',
+                onTap: () {
+                  // TODO
+                },
+              ),
+            ],
+          ),
+
 
 
         ],
