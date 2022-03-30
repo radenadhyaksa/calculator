@@ -26,15 +26,14 @@ class MyHomePage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              color: Theme.of(context).primaryColor,
-              child: Align(
-                alignment: Alignment.centerRight,
+              color: Theme.of(context).primaryColorLight,
+              child: Center(
                 child: Text(
-                  '0',
+                  'C',
                   style: Theme.of(context)
                       .textTheme
-                      .headline3!
-                      .copyWith(color: Colors.white),
+                      .headline4!
+                      .copyWith(color: Theme.of(context).primaryColorDark),
                 ),
               ),
             ),
