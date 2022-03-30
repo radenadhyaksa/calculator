@@ -70,6 +70,24 @@ class MyHomePage extends StatelessWidget {
                   // TODO
                 },
               ),
+              CalculatorButton.Icon(
+                backgroundColor: Theme.of(context).primaryColorDark,
+                foregroundColor: Theme.of(context).primaryColorLight,
+                text: 'Backspace',
+                icon: Icons.backspace,
+                onTap: () {
+                  setState(() {
+                    if (screenText == '0' ||
+                        screenText == '' ||
+                        screenText.length == 1) {
+                      screenText = '0';
+                    } else {
+                      screenText =
+                          screenText.substring(0, screenText.length - 1);
+                    }
+                  });
+                },
+              ),
 
 
 
