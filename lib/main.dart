@@ -38,17 +38,34 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          GridView.count(
+         GridView.count(
             padding: const EdgeInsets.all(0),
             shrinkWrap: true,
             crossAxisCount: 4,
-            children: <Widget>[],
-          ),
+            children: <Widget>[
+              CalculatorButton(
+                backgroundColor: Theme.of(context).primaryColorLight,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: 'C',
+                onTap: () {
+                  setState(() {
+                    screenText = '0';
+                  });
+                },
+              ),
+
+
+
         ],
       ),
     );
   }
 }
+
+
+
+
+
 
 class CalculatorButton extends StatelessWidget {
   final Color backgroundColor;
