@@ -105,6 +105,14 @@ class MyHomePage extends StatelessWidget {
                   pressNumber(8);
                 },
               ),
+               CalculatorButton(
+                backgroundColor: Colors.white,
+                foregroundColor: Theme.of(context).primaryColorDark,
+                text: '9',
+                onTap: () {
+                  pressNumber(9);
+                },
+              ),
 
 
         ],
