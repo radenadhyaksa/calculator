@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-         GridView.count(
+          GridView.count(
             padding: const EdgeInsets.all(0),
             shrinkWrap: true,
             crossAxisCount: 4,
@@ -53,8 +53,7 @@ class MyHomePage extends StatelessWidget {
                   });
                 },
               ),
-
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Theme.of(context).primaryColorLight,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '+/-',
@@ -62,7 +61,7 @@ class MyHomePage extends StatelessWidget {
                   // TODO
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Theme.of(context).primaryColorLight,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '%',
@@ -88,8 +87,7 @@ class MyHomePage extends StatelessWidget {
                   });
                 },
               ),
-
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '7',
@@ -97,7 +95,7 @@ class MyHomePage extends StatelessWidget {
                   pressNumber(7);
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '8',
@@ -105,7 +103,7 @@ class MyHomePage extends StatelessWidget {
                   pressNumber(8);
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '9',
@@ -129,7 +127,7 @@ class MyHomePage extends StatelessWidget {
                   pressNumber(4);
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '6',
@@ -145,7 +143,7 @@ class MyHomePage extends StatelessWidget {
                   // TODO
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Colors.white,
                 foregroundColor: Theme.of(context).primaryColorDark,
                 text: '1',
@@ -205,7 +203,7 @@ class MyHomePage extends StatelessWidget {
                   // TODO
                 },
               ),
-               CalculatorButton(
+              CalculatorButton(
                 backgroundColor: Theme.of(context).primaryColorDark,
                 foregroundColor: Theme.of(context).primaryColorLight,
                 text: '+',
@@ -215,19 +213,11 @@ class MyHomePage extends StatelessWidget {
               ),
             ],
           ),
-
-
-
         ],
       ),
     );
   }
 }
-
-
-
-
-
 
 class CalculatorButton extends StatelessWidget {
   final Color backgroundColor;
