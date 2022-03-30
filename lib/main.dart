@@ -46,7 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          
           GridView.count(
             padding: const EdgeInsets.all(0),
             shrinkWrap: true,
@@ -234,6 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
   void pressNumber(int number) {
     setState(() {
       if (screenText == '0') {
@@ -248,11 +248,19 @@ class _MyHomePageState extends State<MyHomePage> {
 class CalculatorButton extends StatelessWidget {
   final Color backgroundColor;
   final Color foregroundColor;
+
   final String text;
   CalculatorButton({
     required this.backgroundColor,
     required this.foregroundColor,
     required this.text,
+  });
+  CalculatorButton.Icon({
+    required this.backgroundColor,
+    required this.foregroundColor,
+    required this.icon,
+    required this.text,
+    required this.onTap,
   });
 
   @override
